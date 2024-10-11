@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1oq5yoe3jrls"]
+
+[ext_resource type="Texture2D" uid="uid://cnalxoi0pfjx2" path="res://Map/caja_zanahorias.png" id="1_l4abh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ni6yi"]
+size = Vector2(61, 59)
+
+[node name="caja zanahorias" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_l4abh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2.5, 4.5)
+shape = SubResource("RectangleShape2D_ni6yi")

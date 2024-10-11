@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqjqb27bpvm7w"]
+
+[ext_resource type="Texture2D" uid="uid://bvuf5rg6bp6ih" path="res://pixel art/Small Forest Asset Pack/Trees/Tree-1/Tree-1-3.png" id="1_xip7k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ju5rt"]
+size = Vector2(30, 26)
+
+[node name="Arbol" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xip7k")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 7)
+shape = SubResource("RectangleShape2D_ju5rt")

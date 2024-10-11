@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm16tdn7pvjxd"]
+
+[ext_resource type="Texture2D" uid="uid://cwois55o717v6" path="res://Map/casa2.png" id="1_kbgys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eagqn"]
+size = Vector2(242, 209)
+
+[node name="Area2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_kbgys")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 13.5)
+shape = SubResource("RectangleShape2D_eagqn")

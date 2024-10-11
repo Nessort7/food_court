@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://beh48lj61o1v7"]
+
+[ext_resource type="Texture2D" uid="uid://bvjipstfcloxd" path="res://Map/floreria .png" id="1_f6o5g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shcm8"]
+size = Vector2(262, 242)
+
+[node name="Area2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_f6o5g")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, -6)
+shape = SubResource("RectangleShape2D_shcm8")

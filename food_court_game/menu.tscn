@@ -1,0 +1,97 @@
+[gd_scene load_steps=9 format=3 uid="uid://b0jlyherrcfm4"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_u7afg"]
+[ext_resource type="Texture2D" uid="uid://dxltmbmr24uvo" path="res://pixel art/logo.png" id="2_4iojm"]
+[ext_resource type="Texture2D" uid="uid://wvjsw5ep3phn" path="res://boton_ng.png" id="3_c35a3"]
+[ext_resource type="Texture2D" uid="uid://cyi5e4ly8cgnj" path="res://boton_s.png" id="4_u62vx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rkgg"]
+bg_color = Color(0.567159, 0.615067, 0.579192, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ddexe"]
+bg_color = Color(0.759153, 0.557691, 0.268878, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28p4v"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qwe1"]
+bg_color = Color(0.757561, 0.555372, 0.318542, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u7afg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.529067, 0.529067, 0.529067, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -538.0
+offset_top = -361.0
+offset_right = 541.0
+offset_bottom = 367.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4iojm")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.737
+anchor_top = 0.711
+anchor_right = 0.737
+anchor_bottom = 0.711
+offset_left = -130.96
+offset_top = -134.92
+offset_right = 161.04
+offset_bottom = 89.08
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 31
+
+[node name="play" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_2rkgg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ddexe")
+text = "Start Game"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/VBoxContainer/play"]
+position = Vector2(143, 35)
+scale = Vector2(2.32031, 2.1875)
+texture = ExtResource("3_c35a3")
+
+[node name="exit" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_28p4v")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_1qwe1")
+text = "Exit Game"
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect/VBoxContainer/exit"]
+position = Vector2(149, 30)
+scale = Vector2(2.31641, 2.13672)
+texture = ExtResource("4_u62vx")
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tb6q1ywf6xo6"]
+
+[ext_resource type="Texture2D" uid="uid://dn424pgfv8h2" path="res://Map/tablon.png" id="1_yxk6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkmet"]
+size = Vector2(112, 33)
+
+[node name="Area2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_yxk6u")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 35.5)
+shape = SubResource("RectangleShape2D_kkmet")

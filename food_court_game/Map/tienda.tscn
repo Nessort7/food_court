@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://comala4br22lr"]
+
+[ext_resource type="Texture2D" uid="uid://dmg3jn4uftnfn" path="res://Map/tienda.png" id="1_igtsb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lp3i1"]
+size = Vector2(157, 204)
+
+[node name="StaticBody2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_igtsb")
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+position = Vector2(-17, 105)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(20.5, -91)
+shape = SubResource("RectangleShape2D_lp3i1")

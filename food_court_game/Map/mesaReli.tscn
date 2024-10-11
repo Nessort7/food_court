@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3klxiokibl52"]
+
+[ext_resource type="Texture2D" uid="uid://du41hjw1ek3in" path="res://Map/mesaReli.png" id="1_04j6x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7mf5"]
+size = Vector2(120, 98)
+
+[node name="Area2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_04j6x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_h7mf5")

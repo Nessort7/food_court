@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://tdiyvkqgvigt"]
+
+[ext_resource type="Texture2D" uid="uid://bderk2rgosuyc" path="res://pixel art/Small Forest Asset Pack/Bushes/Stump.png" id="1_citrc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnt8p"]
+size = Vector2(89, 61)
+
+[node name="tocon" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3.5, 3.5)
+texture = ExtResource("1_citrc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.5, 6.5)
+shape = SubResource("RectangleShape2D_tnt8p")

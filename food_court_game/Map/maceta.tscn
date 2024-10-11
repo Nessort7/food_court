@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8uneuyojus2r"]
+
+[ext_resource type="Texture2D" uid="uid://b23udh7cuyk2p" path="res://Map/maceta.png" id="1_77opt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dk4ti"]
+size = Vector2(37, 38.5)
+
+[node name="Area2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_77opt")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1.5, 22.25)
+shape = SubResource("RectangleShape2D_dk4ti")

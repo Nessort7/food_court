@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dgyy04kql1i3w"]
+
+[ext_resource type="Texture2D" uid="uid://bta2jj5jr2bs8" path="res://Map/barril.png" id="1_vogar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4yn4f"]
+size = Vector2(14, 15)
+
+[node name="Area2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vogar")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_4yn4f")
